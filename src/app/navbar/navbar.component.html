@@ -1,1 +1,8 @@
-<h1>Navbar Component</h1>
+<h1>{{ title }}</h1>
+<button
+  [disabled]="isEnabled === true"
+  [class.active]="isActive"
+  [class.inactive]="!isActive"
+>
+  Click
+</button>

@@ -6,4 +6,8 @@ import { Component } from '@angular/core';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
 })
-export class AppNavbar {}
+export class AppNavbar {
+  title: string = 'Navbar component';
+  isActive: boolean = false;
+  isEnabled: boolean = true;
+}
