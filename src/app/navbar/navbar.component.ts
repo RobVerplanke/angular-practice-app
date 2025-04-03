@@ -8,6 +8,18 @@ import { Component } from '@angular/core';
 })
 export class AppNavbar {
   title: string = 'Navbar component';
-  isActive: boolean = false;
+  isActive: boolean = true;
   isEnabled: boolean = true;
+
+  buttonClick() {
+    console.log('clicked');
+  }
+
+  keyEnter(event: any) {
+    console.log(event.keyCode);
+  }
+
+  keyUpFilter() {
+    console.log('Enter key pressed');
+  }
 }

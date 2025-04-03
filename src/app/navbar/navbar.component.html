@@ -1,8 +1,13 @@
 <h1>{{ title }}</h1>
 <button
-  [disabled]="isEnabled === true"
-  [class.active]="isActive"
-  [class.inactive]="!isActive"
+  [disabled]="isEnabled === false"
+  [style.backgroundColor]="isActive ? 'green' : 'red'"
 >
-  Click
+  Button one
 </button>
+&nbsp;
+<button (click)="buttonClick()" [class.styled-button]="true">Button two</button>
+<br />
+<input type="text" (keyup)="keyEnter($event)" />
+<br />
+<input type="text" (keyup.enter)="keyUpFilter()" />

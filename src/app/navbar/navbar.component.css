@@ -10,3 +10,9 @@ h1 {
 .inactive {
   background-color: red;
 }
+
+.styled-button {
+  background-color: yellow;
+  border: 1px solid purple;
+  border-radius: 4px;
+}
