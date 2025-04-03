@@ -10,4 +10,10 @@
 <br />
 <input type="text" (keyup)="keyEnter($event)" />
 <br />
-<input type="text" (keyup.enter)="keyUpFilter()" />
+<input type="text" (keyup.enter)="keyUpFilter(user)" #user />
+<p [class.title]="true">Two-way Data binding</p>
+<p>userName: {{ userName }}</p>
+<input type="text" (keyup.enter)="updateUserName(username)" #username />
+<p [class.title]="true">Data binding with ngModel directive</p>
+<p>userAdress: {{ userAdress }}</p>
+<input type="text" [(ngModel)]="userAdress" />
