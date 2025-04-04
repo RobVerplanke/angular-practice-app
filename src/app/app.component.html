@@ -1,3 +1,32 @@
-<app-navbar></app-navbar>
+<!-- <app-navbar></app-navbar> -->
 <h1>{{ title }}</h1>
-<app-footer></app-footer>
+
+<!-- Use Multiple conditions -->
+
+<h3 *ngIf="isAdmin">Welcome Admin</h3>
+<h3 *ngIf="isMember">Welcome Member</h3>
+<h3 *ngIf="isGuest">Welcome Guest</h3>
+
+<!-- Use NgIf/else statement for conditional render -->
+
+<h3 *ngIf="isAdmin; else welcomeMember">Welcome Admin</h3>
+
+<ng-template #welcomeMember>
+  <h3 *ngIf="isMember; else welcomeGuest">Welcome Member</h3>
+</ng-template>
+
+<ng-template #welcomeGuest>
+  <h3 *ngIf="isGuest">Welcome Guest</h3>
+</ng-template>
+
+<!-- Use if/else statements for conditional render -->
+
+@if(isAdmin){
+<h3>Welcome Admin</h3>
+} @else if(isMember){
+<h3>Welcome Member</h3>
+} @else if(isGuest){
+<h3>Welcome Guest</h3>
+}
+
+<!-- <app-footer></app-footer> -->

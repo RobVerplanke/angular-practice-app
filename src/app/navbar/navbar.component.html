@@ -1,11 +1,12 @@
 <h1>{{ title }}</h1>
-<button
-  [disabled]="isEnabled === false"
-  [style.backgroundColor]="isActive ? 'green' : 'red'"
->
-  Button one
-</button>
-&nbsp;
+
+<!-- If else  -->
+@if(isActive) {
+<button [style.backgroundColor]="isActive ? 'green' : 'red'">Button one</button>
+} @else{
+<p>Button not active</p>
+} &nbsp;
+
 <button (click)="buttonClick()" [class.styled-button]="true">Button two</button>
 <br />
 <input type="text" (keyup)="keyEnter($event)" />
