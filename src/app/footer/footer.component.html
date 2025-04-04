@@ -1,1 +1,4 @@
 <p>{{ title }}</p>
+
+<button (click)="handleClick()" [disabled]="!isActive">Click</button>
+<h2 *ngIf="!isActive">Exceeded 3 login attempts! Try again later...</h2>
